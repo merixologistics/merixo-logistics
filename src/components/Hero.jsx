@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import BgVideo from '../assets/BgVideo.mp4';
 import { ArrowRight, Globe, Package, ChevronDown } from 'lucide-react';
+import image from "../assets/main.png"
 
 const Hero = () => {
     const videoRef = useRef(null);
@@ -64,7 +65,7 @@ const Hero = () => {
         <div ref={heroRef} className="relative h-screen w-full overflow-hidden flex items-center justify-center">
             {/* Background Video with Overlay */}
             <motion.div 
-                className="absolute inset-0 z-0"
+                className="absolute inset-0 z-0 overflow-hidden"
                 style={{ scale }}
             >
                 <video
@@ -77,7 +78,7 @@ const Hero = () => {
                     {/* Fallback for browsers that don't support video */}
                     Your browser does not support the video tag.
                 </video>
-                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 bg-black/50" />
             </motion.div>
 
             {/* Content */}
@@ -91,6 +92,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     
+                    
 
                     <motion.h1 
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
@@ -98,6 +100,8 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                     >
+                        {/* photo image */}
+                        {/* <img src={image} alt="Main" className='w-50 h-40 rounded-full mx-auto mb-4' /> */}
                         Premium <span className="text-transparent bg-clip-text bg-gradient-to-r from-spice-gold to-spice-red">Indian Products</span> <br className="hidden sm:block" />
                         Delivered <span className="text-transparent bg-clip-text bg-gradient-to-r from-coconut-light to-coconut">Worldwide</span>
                     </motion.h1>

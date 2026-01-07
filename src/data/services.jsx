@@ -1,6 +1,6 @@
 import React from 'react';
 import { Ship, Plane, Warehouse, Boxes, Truck, Package, Globe, ShieldCheck } from 'lucide-react';
-import flight from '../assets/flight.jpg';
+import flight from '../assets/flight.png';
 
 export const servicesData = [
     {

@@ -18,7 +18,7 @@ const Products = () => {
                         className="lg:w-1/2 relative"
                     >
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                            <img src={productsImg} alt="Coconuts and Spices" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
+                            <img src={productsImg} alt="Indian Export Products" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60" />
                         </div>
                         {/* Floating Badge */}
@@ -35,7 +35,7 @@ const Products = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-stone-500 font-medium">Quality Guaranteed</p>
-                                    <p className="text-xl font-bold text-stone-800">100% Organic</p>
+                                    <p className="text-xl font-bold text-stone-800">ISO & FSSAI Certified</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -51,19 +51,19 @@ const Products = () => {
                     >
                         <span className="text-spice font-semibold tracking-wider uppercase">Premium Exports</span>
                         <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mt-2 mb-6 leading-tight">
-                            Authentic <span className="text-coconut-dark">Coconuts</span> & <br />
-                            Aromatic <span className="text-spice-red">Spices</span>
+                            Premium <span className="text-coconut-dark">Basmati Rice</span> & <br />
+                            Aromatic <span className="text-spice-red">Indian Spices</span>
                         </h2>
                         <p className="text-lg text-stone-600 mb-8 leading-relaxed">
-                            We bridge the gap between local farms and international markets. Our specialized logistics network ensures fresh deliveries to major hubs including **Dubai**, **London**, and **Singapore**.
+                            We bridge the gap between Indian farms and international markets. Our specialized logistics network ensures fresh deliveries to 16+ countries including Dubai, London, and Singapore.
                         </p>
 
                         <div className="space-y-6">
                             {[
-                                "Fresh Green & Dry Coconuts",
-                                "Premium Cardamom, Pepper & Turmeric",
-                                "Cold Chain Warehousing Solutions",
-                                "Direct to Port: GCC & Europe"
+                                "Premium Basmati & Non-Basmati Rice",
+                                "Authentic Spices: Turmeric, Cumin & Chilli",
+                                "Fresh Fruits: Banana, Pomegranate & Mango",
+                                "Farm Fresh Vegetables: Onion, Potato & Drumstick"
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
