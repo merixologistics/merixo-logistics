@@ -11,12 +11,7 @@ const AboutUs = () => {
         { icon: Shield, title: 'Trust & Reliability', desc: 'Building long-term partnerships' },
     ];
 
-    const team = [
-        { name: 'Sheshuaakaash', role: 'Founder & CEO', image: founderImage },
-        { name: 'Priya Patel', role: 'Operations Director', image: 'https://randomuser.me/api/portraits/women/65.jpg' },
-        { name: 'Amit Singh', role: 'Export Manager', image: 'https://randomuser.me/api/portraits/men/32.jpg' },
-        { name: 'Sunita Reddy', role: 'Quality Assurance', image: 'https://randomuser.me/api/portraits/women/44.jpg' },
-    ];
+    const founder = { name: 'Sheshuaakaash', role: 'Founder & CEO', image: founderImage };
 
     return (
         <div className="min-h-screen bg-white pt-20 sm:pt-24">
@@ -141,7 +136,7 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            {/* Our Team */}
+            {/* Founder */}
             <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
                 <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
@@ -150,31 +145,25 @@ const AboutUs = () => {
                         viewport={{ once: true }}
                         className="text-center mb-8 sm:mb-10 md:mb-12"
                     >
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 mb-3 sm:mb-4">Meet Our Team</h2>
-                        <p className="text-stone-600 text-sm sm:text-base">The people behind Merixo's success</p>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 mb-3 sm:mb-4">Our Founder</h2>
+                        <p className="text-stone-600 text-sm sm:text-base">The visionary behind Merixo's success</p>
                     </motion.div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-                        {team.map((member, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                                whileHover={{ y: -5 }}
-                                className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg text-center"
-                            >
-                                <img
-                                    src={member.image}
-                                    alt={member.name}
-                                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full mx-auto mb-3 sm:mb-4 object-cover"
-                                />
-                                <h3 className="font-bold text-stone-900 text-sm sm:text-base">{member.name}</h3>
-                                <p className="text-spice text-xs sm:text-sm">{member.role}</p>
-                            </motion.div>
-                        ))}
-                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5 }}
+                        className="max-w-md mx-auto bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl text-center"
+                    >
+                        <img
+                            src={founder.image}
+                            alt={founder.name}
+                            className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full mx-auto mb-6 object-cover border-4 border-spice shadow-xl"
+                        />
+                        <h3 className="font-bold text-stone-900 text-2xl sm:text-3xl mb-2">{founder.name}</h3>
+                        <p className="text-spice text-lg sm:text-xl font-semibold">{founder.role}</p>
+                    </motion.div>
                 </div>
             </section>
         </div>

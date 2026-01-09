@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import BgVideo from '../assets/BgVideo.mp4';
+import BgVideo from '../assets/bg-video.mp4';
 import { ArrowRight, Globe, Package, ChevronDown } from 'lucide-react';
 import image from "../assets/main.png"
 
@@ -72,13 +72,13 @@ const Hero = () => {
                     ref={videoRef}
                     loop
                     playsInline
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover "
                 >
                     <source src={BgVideo} type="video/mp4" />
                     {/* Fallback for browsers that don't support video */}
                     Your browser does not support the video tag.
                 </video>
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/70" />
             </motion.div>
 
             {/* Content */}

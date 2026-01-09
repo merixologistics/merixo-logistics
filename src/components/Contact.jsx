@@ -32,8 +32,8 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-semibold">Call Us</h4>
-                                    <p className="text-stone-400">+1 (555) 123-4567</p>
-                                    <p className="text-stone-500 text-sm">Mon-Fri, 9am - 6pm EST</p>
+                                    <p className="text-stone-400">+91 9344722606</p>
+                                    <p className="text-stone-500 text-sm">Mon-Sat</p>
                                 </div>
                             </div>
 
@@ -54,8 +54,8 @@ const Contact = () => {
                                 <div>
                                     <h4 className="text-lg font-semibold">Headquarters</h4>
                                     <p className="text-stone-400">
-                                        123 Logistics Way, Port City<br />
-                                        Warehousing: Dubai, Singapore, Rotterdam
+                                        Pattukkottai,<br />
+                                        Thanjavur Dt,614601
                                     </p>
                                 </div>
                             </div>
@@ -105,7 +105,7 @@ const Contact = () => {
                 </div>
 
                 <div className="border-t border-white/10 mt-20 pt-8 text-center text-stone-500 text-sm">
-                    <p>&copy; 2024 Global Export Logistics. All rights reserved.</p>
+                    <p>&copy; 2025 developed by <a href='https://vishor-portfolio.netlify.app/' target="_blank">Vishor.</a>All rights reserved</p>
                 </div>
             </div>
         </section>
