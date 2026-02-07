@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Target, Eye, Heart, Users, Globe, Shield } from 'lucide-react';
 import founderImage from '../assets/Founder.png';
 
+
 const AboutUs = () => {
     const values = [
         { icon: Heart, title: 'Quality First', desc: 'We never compromise on the quality of our products' },
@@ -11,7 +12,7 @@ const AboutUs = () => {
         { icon: Shield, title: 'Trust & Reliability', desc: 'Building long-term partnerships' },
     ];
 
-    const founder = { name: 'Sheshuaakaash', role: 'Founder & CEO', image: founderImage };
+    const founder = { name: 'Sheshuaakaash', location: 'TamilNadu, India', image: founderImage };
 
     return (
         <div className="min-h-screen bg-white pt-20 sm:pt-24">
@@ -137,7 +138,7 @@ const AboutUs = () => {
             </section>
 
             {/* Founder */}
-            <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+            {/* <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
                 <div className="container mx-auto px-4 sm:px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -163,9 +164,15 @@ const AboutUs = () => {
                         />
                         <h3 className="font-bold text-stone-900 text-2xl sm:text-3xl mb-2">{founder.name}</h3>
                         <p className="text-spice text-lg sm:text-xl font-semibold">{founder.role}</p>
+                        <p className="text-spice text-lg sm:text-xl font-semibold">TamilNadu,India</p>
                     </motion.div>
+
+
                 </div>
-            </section>
+            </section> */}
+            <div className="border-t border-white/10  pt-8 bg-black  text-center text-stone-500 text-sm py-6">
+                    <p>&copy; 2025 developed by <a href='https://vishor-portfolio.netlify.app/' target="_blank">Vishor.</a>All rights reserved</p>
+                </div>
         </div>
     );
 };

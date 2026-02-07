@@ -10,7 +10,7 @@ const Quote = () => {
     name: "",
     email: "",
     message: "",
-    cargoType: "Fresh Coconuts",
+    cargoType: "",
     destination: ""
   });
 
@@ -28,19 +28,29 @@ const Quote = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Send first email (to you)
     emailjs.send(
-      "service_kio9h3e",
-      "template_8lskf0u",
+      "service_kio9h3e", // your service ID
+      "template_8lskf0u",  // template 1 (to you)
       form,
       "sWVHIF0FZfSbM7iWM"
     )
+    .then(() => {
+      // After first email succeeds, send auto-reply
+      return emailjs.send(
+        "service_kio9h3e",
+        "template_6hou5kj",     // template 2 (auto reply)
+        form,
+        "sWVHIF0FZfSbM7iWM"
+      );
+    })
     .then(() => {
       showAlert('success', 'Quote request sent successfully! We will contact you soon.');
       setForm({
         name: "",
         email: "",
         message: "",
-        cargoType: "Fresh Coconuts",
+        cargoType: "",
         destination: ""
       });
     })
@@ -116,7 +126,7 @@ const Quote = () => {
                                     </div>
                                     <div>
                                         <p className="text-xs text-stone-400 uppercase">Export License</p>
-                                        <p className="font-medium">IEC: AA12345678</p>
+                                        <p className="font-medium">IEC: </p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-3">
@@ -125,13 +135,13 @@ const Quote = () => {
                                     </div>
                                     <div>
                                         <p className="text-xs text-stone-400 uppercase">Headquarters</p>
-                                        <p className="font-medium">Kerala, India</p>
+                                        <p className="font-medium">TamilNadu, India</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="mt-10">
-                            <p className="text-sm text-stone-500">Global Export Partner &copy; 2024</p>
+                            <p className="text-sm text-stone-500">Trusted Indian Export Partner &copy; 2026</p>
                         </div>
                     </div>
 
@@ -148,7 +158,7 @@ const Quote = () => {
                                         required 
                                         type="text" 
                                         className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-spice outline-none focus:ring-2 focus:ring-spice/20 transition-all" 
-                                        placeholder="John Doe" 
+                                        placeholder="SreeHari" 
                                     />
                                 </div>
                                 <div>
@@ -160,7 +170,7 @@ const Quote = () => {
                                         type="email"  
                                         onChange={handleChange} 
                                         className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-spice outline-none focus:ring-2 focus:ring-spice/20 transition-all" 
-                                        placeholder="john@company.com" 
+                                        placeholder="sreehari@gmail.com" 
                                     />
                                 </div>
                             </div>
@@ -174,10 +184,10 @@ const Quote = () => {
                                         onChange={handleChange} 
                                         className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-spice outline-none focus:ring-2 focus:ring-spice/20 transition-all"
                                     >
-                                        <option>Fresh Coconuts</option>
-                                        <option>Spices (Bulk)</option>
-                                        <option>Mixed Container</option>
-                                        <option>Other</option>
+                                        <option>AirWays Type</option>
+                                        <option>OceanWays Type</option>
+                                        {/* <option>Mixed Container</option>
+                                        <option>Other</option> */}
                                     </select>
                                 </div>
                                 <div>

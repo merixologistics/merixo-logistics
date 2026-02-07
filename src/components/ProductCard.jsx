@@ -26,12 +26,12 @@ const ProductCard = ({ product }) => {
             <div className="p-6">
                 <h3 className="text-xl font-bold text-stone-800 mb-2">{product.name}</h3>
                 <p className="text-stone-600 text-sm mb-4 line-clamp-2">{product.description}</p>
-                <div className="flex justify-between items-center">
+                {/* <div className="flex justify-between items-center">
                     <span className="text-lg font-semibold text-coconut-dark">{product.price}</span>
                     <button className="text-sm font-medium text-stone-500 hover:text-stone-900 transition-colors">
                         View Details &rarr;
                     </button>
-                </div>
+                </div> */}
             </div>
         </motion.div>
     );

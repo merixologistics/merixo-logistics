@@ -34,6 +34,19 @@ import Watermelon from "../ProductImages/Watermelon.jpg"
 import Ginger from "../ProductImages/Ginger.jpg"
 import Garlic from "../ProductImages/Garlic.png"
 import Cloves from "../ProductImages/Cloves.png"
+import Almond from "../ProductImages/almond.jpg"
+import BlackPepper from "../ProductImages/blackpepper.png"
+import BrinjiLeaf from "../ProductImages/brinji leaf.webp"
+import Cashews from "../ProductImages/cashwes.jpg"
+import Clapasi from "../ProductImages/clapasi.jpg"
+import Dates from "../ProductImages/dates.jpg"
+import Fig from "../ProductImages/fig.jpg"
+import Pista from "../ProductImages/pista.webp"
+import DryGinger from "../ProductImages/dry ginger.jpg"
+import DryOrange from "../ProductImages/dryorange.jpg"
+import DryPlums from "../ProductImages/dryplums.jpg"
+import Raisins from "../ProductImages/Raisins.webp"
+import Walnuts from "../ProductImages/walnuts.jpg"
 
 
 export const categories = [
@@ -42,6 +55,7 @@ export const categories = [
     { id: 'spices', name: 'Spices' },
     { id: 'freshvegetables', name: 'Freshvegetables' },
     { id: 'fruits', name: 'Fruits' },
+    { id: 'dryfruits', name: 'Dry Fruits & Nuts' },
 ];
 
 export const products = [
@@ -321,6 +335,110 @@ export const products = [
         image: Watermelon,
         description: 'Large watermelons with sweet red flesh, perfect for summer.',
         price: '$3 / kg'
+    },
+    {
+        id: 30,
+        name: 'Almond',
+        category: 'dryfruits',
+        image: Almond,
+        description: 'Premium quality almonds rich in protein, fiber, and healthy fats.',
+        price: '$22 / kg'
+    },
+    {
+        id: 31,
+        name: 'Black Pepper',
+        category: 'spices',
+        image: BlackPepper,
+        description: 'Bold black peppercorns with sharp flavor and aroma.',
+        price: '$18 / kg'
+    },
+    {
+        id: 32,
+        name: 'Brinji Leaf',
+        category: 'spices',
+        image: BrinjiLeaf,
+        description: 'Aromatic bay leaves perfect for flavoring curries and rice dishes.',
+        price: '$10 / kg'
+    },
+    {
+        id: 33,
+        name: 'Cashews',
+        category: 'dryfruits',
+        image: Cashews,
+        description: 'Premium whole cashew nuts, creamy and delicious.',
+        price: '$28 / kg'
+    },
+    {
+        id: 34,
+        name: 'Clapasi',
+        category: 'spices',
+        image: Clapasi,
+        description: 'Traditional stone flower spice for authentic Indian cuisine.',
+        price: '$15 / kg'
+    },
+    {
+        id: 35,
+        name: 'Dates',
+        category: 'dryfruits',
+        image: Dates,
+        description: 'Sweet and nutritious dates, natural energy booster.',
+        price: '$14 / kg'
+    },
+    {
+        id: 36,
+        name: 'Fig',
+        category: 'dryfruits',
+        image: Fig,
+        description: 'Dried figs packed with fiber, minerals, and natural sweetness.',
+        price: '$20 / kg'
+    },
+    {
+        id: 37,
+        name: 'Pista (Pistachio)',
+        category: 'dryfruits',
+        image: Pista,
+        description: 'Premium pistachios with rich flavor and nutritional benefits.',
+        price: '$35 / kg'
+    },
+    {
+        id: 38,
+        name: 'Dry Ginger',
+        category: 'spices',
+        image: DryGinger,
+        description: 'Premium dried ginger with intense flavor for cooking and medicinal use.',
+        price: '$16 / kg'
+    },
+    {
+        id: 39,
+        name: 'Dry Orange',
+        category: 'dryfruits',
+        image: DryOrange,
+        description: 'Dehydrated orange slices, perfect for tea and healthy snacking.',
+        price: '$18 / kg'
+    },
+    {
+        id: 40,
+        name: 'Dry Plums (Prunes)',
+        category: 'dryfruits',
+        image: DryPlums,
+        description: 'Nutritious dried plums rich in fiber and antioxidants.',
+        price: '$16 / kg'
+    },
+    {
+        id: 41,
+        name: 'Raisins',
+        category: 'dryfruits',
+        image: Raisins,
+        description: 'Sweet and chewy raisins, natural source of energy and nutrients.',
+        price: '$12 / kg'
+    },
+    {
+        id: 42,
+        name: 'Walnuts',
+        category: 'dryfruits',
+        image: Walnuts,
+        description: 'Premium walnuts rich in omega-3 fatty acids and antioxidants.',
+        price: '$30 / kg'
     },
 
     

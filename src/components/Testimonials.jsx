@@ -13,8 +13,8 @@ const testimonials = [
     },
     {
         name: 'Yuki Tanaka',
-        company: 'Tokyo Fresh Imports',
-        country: 'Japan',
+        company: 'Srilanka Fresh Imports',
+        country: 'Srilanka',
         image: 'https://randomuser.me/api/portraits/women/44.jpg',
         rating: 5,
         text: 'The freshness of their produce is unmatched. We receive our shipments in perfect condition every time. Highly recommended!',
