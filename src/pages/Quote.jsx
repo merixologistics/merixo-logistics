@@ -158,7 +158,7 @@ const Quote = () => {
                                         required 
                                         type="text" 
                                         className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-spice outline-none focus:ring-2 focus:ring-spice/20 transition-all" 
-                                        placeholder="SreeHari" 
+                                        placeholder="Your Name" 
                                     />
                                 </div>
                                 <div>
@@ -170,7 +170,7 @@ const Quote = () => {
                                         type="email"  
                                         onChange={handleChange} 
                                         className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-spice outline-none focus:ring-2 focus:ring-spice/20 transition-all" 
-                                        placeholder="sreehari@gmail.com" 
+                                        placeholder="Company@gmail.com" 
                                     />
                                 </div>
                             </div>

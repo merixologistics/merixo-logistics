@@ -43,7 +43,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg font-semibold">Email Us</h4>
-                                    <p className="text-stone-400">exports@globalexport.com</p>
+                                    <p className="text-stone-400">merixologistics@gmail.com</p>
                                 </div>
                             </div>
 
@@ -73,11 +73,11 @@ const Contact = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label className="text-sm text-stone-400 font-medium">Your Name</label>
-                                    <input type="text" className="w-full bg-stone-800/50 border border-stone-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-spice-gold transition-colors" placeholder="John Doe" />
+                                    <input type="text" className="w-full bg-stone-800/50 border border-stone-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-spice-gold transition-colors" placeholder="Your Name" />
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-sm text-stone-400 font-medium">Email Address</label>
-                                    <input type="email" className="w-full bg-stone-800/50 border border-stone-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-spice-gold transition-colors" placeholder="john@company.com" />
+                                    <input type="email" className="w-full bg-stone-800/50 border border-stone-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-spice-gold transition-colors" placeholder="company@gmail.com" />
                                 </div>
                             </div>
 

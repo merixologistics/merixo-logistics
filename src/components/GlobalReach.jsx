@@ -8,7 +8,7 @@ const GlobalReach = () => {
     // Locations to mark with coordinates [longitude, latitude]
     const locations = [
         { name: 'India', coordinates: [78.9629, 20.5937], color: '#D2691E', flag: 'https://flagcdn.com/w40/in.png' },
-        { name: 'Dubai', coordinates: [55.2708, 25.2048], color: '#DAA520', flag: 'https://flagcdn.com/w40/ae.png' },
+        { name: 'UAE', coordinates: [55.2708, 25.2048], color: '#DAA520', flag: 'https://flagcdn.com/w40/ae.png' },
         { name: 'Singapore', coordinates: [103.8198, 1.3521], color: '#B22222', flag: 'https://flagcdn.com/w40/sg.png' },
         { name: 'Malaysia', coordinates: [101.9758, 4.2105], color: '#6B8E23', flag: 'https://flagcdn.com/w40/my.png' },
         { name: 'Sri Lanka', coordinates: [80.7718, 7.8731], color: '#FFC107', flag: 'https://flagcdn.com/w40/lk.png' }
