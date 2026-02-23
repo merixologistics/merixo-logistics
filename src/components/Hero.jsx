@@ -25,17 +25,21 @@ const Hero = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // Hero section is visible - play video (muted for autoplay per browser policy)
+                        // Hero section is visible - play video with audio
                         if (videoElement) {
-                            videoElement.muted = true; // Must be muted for autoplay to work
+                            videoElement.muted = false; // Unmute when hero is visible
                             videoElement.play().catch(err => {
                                 console.log('Video play failed:', err);
+                                // Fallback: try with muted if unmuted fails
+                                videoElement.muted = true;
+                                videoElement.play();
                             });
                         }
                     } else {
-                        // Hero section is not visible - pause video
+                        // Hero section is not visible - pause video and mute
                         if (videoElement) {
                             videoElement.pause();
+                            videoElement.muted = true;
                         }
                     }
                 });
@@ -49,23 +53,11 @@ const Hero = () => {
             observer.observe(heroElement);
         }
 
-        // Allow users to unmute on any interaction
-        const handleUserInteraction = () => {
-            if (videoRef.current && !videoRef.current.paused) {
-                videoRef.current.muted = false; // Unmute after user interaction
-            }
-        };
-
-        document.addEventListener('click', handleUserInteraction);
-        document.addEventListener('touchstart', handleUserInteraction);
-
-        // Cleanup observer and listeners on component unmount
+        // Cleanup observer on component unmount
         return () => {
             if (heroElement) {
                 observer.unobserve(heroElement);
             }
-            document.removeEventListener('click', handleUserInteraction);
-            document.removeEventListener('touchstart', handleUserInteraction);
         };
     }, []);
 
@@ -80,9 +72,7 @@ const Hero = () => {
                     ref={videoRef}
                     loop
                     playsInline
-                    muted
-                    className="absolute inset-0 w-full h-full object-cover cursor-pointer"
-                    title="Click to unmute"
+                    className="absolute inset-0 w-full h-full object-cover"
                 >
                     <source src={BgVideo} type="video/mp4" />
                     {/* Fallback for browsers that don't support video */}
