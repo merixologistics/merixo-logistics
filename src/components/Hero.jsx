@@ -31,7 +31,7 @@ const Hero = () => {
                             videoElement.play().catch(err => {
                                 console.log('Video play failed:', err);
                                 // If autoplay with audio fails, try muted
-                                videoElement.muted = true;
+                                videoElement.muted = false;
                                 videoElement.play();
                             });
                         }
