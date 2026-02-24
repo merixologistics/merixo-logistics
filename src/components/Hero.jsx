@@ -231,7 +231,7 @@ const Hero = () => {
                 <video
                     ref={videoRef}
                     autoPlay
-                    muted
+                    unmuted
                     loop
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover"
@@ -298,7 +298,7 @@ const Hero = () => {
             </motion.div>
 
             {/* Scroll Indicator */}
-            <motion.div
+            {/* <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: [0, 10, 0] }}
                 transition={{ delay: 1.5, duration: 1.5, repeat: Infinity }}
@@ -309,7 +309,7 @@ const Hero = () => {
                     <span className="text-sm font-medium tracking-wider">Scroll Down</span>
                     <ChevronDown className="w-6 h-6" />
                 </div>
-            </motion.div>
+            </motion.div> */}
         </div>
     );
 };
