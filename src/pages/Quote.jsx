@@ -15,9 +15,51 @@ const Quote = () => {
   });
 
   const [alert, setAlert] = useState({ show: false, type: '', message: '' });
+  const [errors, setErrors] = useState({});
+  const [touchedFields, setTouchedFields] = useState({});
+
+  const validateName = (value) => {
+    if (!value.trim()) {
+      return 'Name is required';
+    }
+    if (!/^[A-Za-z\s]+$/.test(value)) {
+      return 'Name should contain only letters and spaces';
+    }
+    if (value.trim().length < 2) {
+      return 'Name must be at least 2 characters';
+    }
+    return '';
+  };
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+
+    if (touchedFields[name]) {
+      if (name === 'name') {
+        const error = validateName(value);
+        setErrors(prev => ({
+          ...prev,
+          [name]: error
+        }));
+      }
+    }
+  };
+
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    setTouchedFields(prev => ({
+      ...prev,
+      [name]: true
+    }));
+
+    if (name === 'name') {
+      const error = validateName(form.name);
+      setErrors(prev => ({
+        ...prev,
+        [name]: error
+      }));
+    }
   };
 
   const showAlert = (type, message) => {
@@ -151,15 +193,48 @@ const Quote = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-medium text-stone-700 mb-2" >Full Name</label>
-                                    <input 
-                                        name="name" 
-                                        value={form.name} 
-                                        onChange={handleChange} 
-                                        required 
-                                        type="text" 
-                                        className="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:border-spice outline-none focus:ring-2 focus:ring-spice/20 transition-all" 
-                                        placeholder="Your Name" 
-                                    />
+                                    <div className="relative">
+                                        <input 
+                                            name="name" 
+                                            value={form.name} 
+                                            onChange={handleChange} 
+                                            onBlur={handleBlur}
+                                            required 
+                                            type="text" 
+                                            className={`w-full px-4 py-3 rounded-lg bg-stone-50 border outline-none transition-all ${
+                                              errors.name && touchedFields.name 
+                                                ? '' 
+                                                : form.name && !errors.name && touchedFields.name
+                                                ? ''
+                                                : 'border-stone-200 focus:border-spice focus:ring-2 focus:ring-spice/20'
+                                            }`}
+                                            placeholder="Your Name" 
+                                        />
+                                        {touchedFields.name && (
+                                            <motion.div
+                                                initial={{ opacity: 0, scale: 0.8 }}
+                                                animate={{ opacity: 1, scale: 1 }}
+                                                className="absolute right-3 top-3"
+                                            >
+                                                {errors.name ? (
+                                                    <XCircle size={20} className="text-red-500" />
+                                                ) : (
+                                                    form.name && <CheckCircle size={20} className="text-green-500" />
+                                                )}
+                                            </motion.div>
+                                        )}
+                                    </div>
+                                    {errors.name && touchedFields.name && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: -10 }}
+                                            className="flex items-center gap-2 text-red-500 text-sm mt-1"
+                                        >
+                                            <XCircle size={16} />
+                                            <span>{errors.name}</span>
+                                        </motion.div>
+                                    )}
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-stone-700 mb-2">Email Address</label>

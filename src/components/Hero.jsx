@@ -298,11 +298,11 @@ const Hero = () => {
 
             {/* Content */}
             <motion.div
-                className="relative z-10 container mx-auto px-4 text-center text-white"
+                className="relative z-10 container mx-auto px-4 sm:px-6 md:px-8 text-center text-white py-10 sm:py-0"
                 style={{ y: textY, opacity }}
             >
                 <motion.h1 
-                        className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
+                        className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight"
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
@@ -313,7 +313,7 @@ const Hero = () => {
                         Delivered <span className="text-transparent bg-clip-text bg-gradient-to-r from-coconut-light to-coconut">Worldwide</span>
                     </motion.h1>
                     <motion.p 
-                        className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto font-light px-2"
+                        className="text-sm sm:text-base md:text-lg lg:text-2xl text-gray-200 mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto font-light px-2"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
@@ -323,35 +323,36 @@ const Hero = () => {
                     </motion.p>
 
                 <motion.div 
-                        className="flex justify-center mb-4"
+                        className="flex justify-center mb-3 sm:mb-4 md:mb-6"
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        <span className="bg-white/10 backdrop-blur-sm mt-[-10px] border border-white/20 px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-medium tracking-wide uppercase flex items-center gap-2">
+                        <span className="bg-white/10 backdrop-blur-sm border border-white/20 px-2 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-medium tracking-wide uppercase flex items-center gap-1 sm:gap-2">
                             <Globe size={14} className="text-spice-gold" />
-                            Trusted Indian Export Partner
+                            <span className="hidden sm:inline">Trusted Indian Export Partner</span>
+                            <span className="sm:hidden">Trusted Export Partner</span>
                         </span>
                     </motion.div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2">
                     <Link to="/quote">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-spice hover:bg-spice-red text-white text-base sm:text-lg font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all shadow-xl shadow-spice/30 flex items-center gap-2 group"
+                                className="w-full sm:w-auto bg-spice hover:bg-spice-red text-white text-sm sm:text-base lg:text-lg font-semibold px-4 sm:px-8 py-2 sm:py-4 rounded-full transition-all shadow-xl shadow-spice/30 flex items-center justify-center gap-2 group"
                             >
                                 Get Free Quote
-                                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight className="group-hover:translate-x-1 transition-transform w-4 h-4 sm:w-5 sm:h-5" />
                             </motion.button>
                         </Link>
                         <Link to="/track">
                             <motion.button
                                 whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.1)' }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-transparent border border-white/30 text-white text-base sm:text-lg font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all backdrop-blur-sm flex items-center gap-2"
+                                className="w-full sm:w-auto bg-transparent border border-white/30 text-white text-sm sm:text-base lg:text-lg font-semibold px-4 sm:px-8 py-2 sm:py-4 rounded-full transition-all backdrop-blur-sm flex items-center justify-center gap-2"
                             >
-                                <Package size={20} />
+                                <Package size={18} className="sm:w-5 sm:h-5" />
                                 Track Order
                             </motion.button>
                         </Link>
@@ -363,7 +364,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: [0, 10, 0] }}
                 transition={{ delay: 1.5, duration: 1.5, repeat: Infinity }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/70 cursor-pointer"
+                className="absolute bottom-4 sm:bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 text-white/70 cursor-pointer px-2"
                 onClick={() =>
                     window.scrollTo({
                         top: window.innerHeight,
@@ -371,12 +372,12 @@ const Hero = () => {
                     })
                 }
             >
-                <div className="flex flex-col items-center gap-2">
-                    <span className="text-sm tracking-wider">
+                {/* <div className="flex flex-col items-center  gap-1 sm:flex flex-col items-center gap-1 ">
+                    <span className="text-xs sm:text-sm tracking-wider">
                         Click Down
                     </span>
-                    <ChevronDown className="w-6 h-6" />
-                </div>
+                    <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div> */}
             </motion.div>
         </div>
     );

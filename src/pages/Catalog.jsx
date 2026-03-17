@@ -11,7 +11,7 @@ const Catalog = () => {
         : products.filter(p => p.category === selectedCategory);
 
     return (
-        <div className="pt-24 min-h-screen bg-stone-50 pb-20">
+        <div className="pt-20 min-h-screen bg-stone-50 pb-20">
             {/* Header */}
             <div className="bg-stone-900 text-white py-16 mb-12">
                 <div className="container mx-auto px-6 text-center">

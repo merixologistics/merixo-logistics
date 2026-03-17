@@ -15,7 +15,7 @@ const AboutUs = () => {
     const founder = { name: 'Sheshuaakaash', location: 'TamilNadu, India', image: founderImage };
 
     return (
-        <div className="min-h-screen bg-white pt-20 sm:pt-24">
+        <div className="min-h-screen bg-white pt-20 sm:pt-20">
             {/* Hero Section */}
             <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-stone-900 to-stone-800">
                 <div className="container mx-auto px-4 sm:px-6">
@@ -170,9 +170,9 @@ const AboutUs = () => {
 
                 </div>
             </section> */}
-            <div className="border-t border-white/10  pt-8 bg-black  text-center text-stone-500 text-sm py-6">
+            {/* <div className="border-t border-white/10  pt-8 bg-black  text-center text-stone-500 text-sm py-6">
                     <p>&copy; 2025 developed by <a href='https://vishor-portfolio.netlify.app/' target="_blank">Vishor.</a>All rights reserved</p>
-                </div>
+                </div> */}
         </div>
     );
 };

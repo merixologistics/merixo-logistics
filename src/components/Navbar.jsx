@@ -6,7 +6,7 @@ import logo from '../assets/logomain.png';
 import NotificationBell from './NotificationBell';
 import LanguageSelector from './LanguageSelector';
 
-const Navbar = () => {
+const   Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();

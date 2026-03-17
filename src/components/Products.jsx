@@ -55,7 +55,7 @@ const Products = () => {
                             Aromatic <span className="text-spice-red">Indian Spices</span>
                         </h2>
                         <p className="text-lg text-stone-600 mb-8 leading-relaxed">
-                            We bridge the gap between Indian farms and international markets. Our specialized logistics network ensures fresh deliveries to 16+ countries including Dubai, London, and Singapore.
+                            We bridge the gap between Indian farms and international markets. Our specialized logistics network ensures fresh deliveries to 16+ countries including Dubai, SriLanka, and Singapore.
                         </p>
 
                         <div className="space-y-6">
